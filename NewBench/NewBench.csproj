@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove=".gitignore" />
+    <ProjectReference Include="..\NewBench.API\NewBench.API.csproj" />
   </ItemGroup>
 
 </Project>
