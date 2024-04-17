@@ -10,14 +10,14 @@ namespace NewBench.Core
                             ISupportInstanceContainer
     {
         private IInstanceContainer? _instanceContainer;
-        private Processor? _processor;
+        private IProcessor? _processor;
 
         public Business() { }
 
         /// <inheritdoc />
         public string GetStr1()
         {
-            _processor ??= _instanceContainer?.GetProcessor<Processor>();
+            _processor ??= _instanceContainer?.GetProcessor<IProcessor>();
             if (_processor == null) return "";
 
             return _processor.Get("str1");
@@ -26,14 +26,14 @@ namespace NewBench.Core
         /// <inheritdoc />
         public string GetStr2()
         {
-            _processor ??= _instanceContainer?.GetProcessor<Processor>();
+            _processor ??= _instanceContainer?.GetProcessor<IProcessor>();
             if (_processor == null) return "";
 
             return _processor.Get("str2");
         }
 
         /// <inheritdoc />
-        public void UsingModel(Domain domain, string str1, string str2)
+        public void UsingModel(IDomain domain, string str1, string str2)
         {
             var model = new Model();
             model.GetCombineStr(domain, str1, str2);

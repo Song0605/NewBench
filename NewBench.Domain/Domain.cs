@@ -9,7 +9,7 @@ namespace NewBench.Core
     /// 一：作为Business的整合，内部逻辑为调用流程；
     /// 二：（设想）作为类似Util的对象，在Model内部调用时，作为参数传入，协助函数处理
     /// </summary>
-    public class Domain : IDomain, 
+    public class Domain : IDomain,
                           ISupportInstanceContainer
     {
         private IInstanceContainer? _instanceContainer;
@@ -17,7 +17,8 @@ namespace NewBench.Core
         public Domain() { }
         public void CombineToOutputString()
         {
-            var business = _instanceContainer.GetBusiness<Business>();
+            if (_instanceContainer == null) return;
+            var business = _instanceContainer.GetBusiness<IBusiness>();
             if (business == null) return;
 
             var str1 = business.GetStr1();
@@ -25,10 +26,10 @@ namespace NewBench.Core
 
             var result = Combine(str1, str2);
 
-            var publisher = _instanceContainer.GetPublisher<Publisher>();
+            var publisher = _instanceContainer.GetPublisher<IPublisher>();
             if (publisher == null) return;
 
-            publisher.OnSomethingPublished(this, new EventArgs<string>(result));
+            publisher.PublishSomething(result);
         }
 
         public string Combine(string str1, string str2)

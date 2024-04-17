@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NewBench.Core\NewBench.Core.csproj" />
-    <ProjectReference Include="..\NewBench.InstanceContainer\NewBench.InstanceContainer.csproj" />
+    <ProjectReference Include="..\NewBench.Factory\NewBench.Factory.csproj" />
   </ItemGroup>
 
 </Project>

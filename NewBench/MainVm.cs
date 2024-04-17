@@ -1,6 +1,7 @@
 ﻿using NewBench.API;
 using NewBench.Core;
 using NewBench.Core.Base;
+using NewBench.Core.Interface.Instance;
 using System.ComponentModel;
 using System.Windows.Input;
 
@@ -13,6 +14,7 @@ namespace NewBench
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public ICommand ButtonCmd { get; set; }
+
         private string _displayText = "示例文字";
         public string DisplayText
         {
@@ -27,7 +29,7 @@ namespace NewBench
         public MainVm()
         {
             _bench = new Bench();
-            _bench.GetPublisher<Publisher>()!.SomethingPublished += MainVm_SomethingPublished;
+            _bench.GetPublisher<IPublisher>()!.SomethingPublished += MainVm_SomethingPublished;
 
             ButtonCmd = new ExampleCommand(_bench.GetCoordinator<Coordinator>()!.DoSomething);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ButtonCmd)));

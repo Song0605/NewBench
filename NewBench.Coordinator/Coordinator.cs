@@ -15,12 +15,12 @@ namespace NewBench.Core
 
         public void DoSomething()
         {
-            var domain = _instanceContainer.GetDomain<Domain>();
+            var domain = _instanceContainer.GetDomain<IDomain>();
             if (domain == null) return;
 
             domain.CombineToOutputString();
 
-            var business = _instanceContainer.GetBusiness<Business>();
+            var business = _instanceContainer.GetBusiness<IBusiness>();
             if (business == null) return;
 
             business.UsingModel(domain, "str1", "str2");

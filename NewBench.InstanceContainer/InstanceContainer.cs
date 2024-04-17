@@ -1,5 +1,6 @@
 ﻿using NewBench.Core.Interface.Ability;
 using NewBench.Core.Interface.Instance;
+using NewBench.Publisher;
 
 namespace NewBench.Core
 {
@@ -9,7 +10,7 @@ namespace NewBench.Core
     public class InstanceContainer : IInstanceContainer
     {
         private readonly ICoordinator _coordinator;
-        private readonly IPublisher _publisher;
+        private readonly IPublisher _examplePublisher;
         private readonly IDomain _domain;
         private readonly IBusiness _business;
         private readonly IProcessor _processor;
@@ -20,7 +21,7 @@ namespace NewBench.Core
             if (_coordinator is ISupportInstanceContainer { } supportInstance1)
                 supportInstance1.Register(this);
 
-            _publisher = new Publisher();
+            _examplePublisher = new ExamplePublisher();
 
             _domain = new Domain();
             if (_domain is ISupportInstanceContainer { } supportInstance2)
@@ -48,7 +49,7 @@ namespace NewBench.Core
         public T? GetPublisher<T>() where T : IPublisher
         {
             if (typeof(T).IsAssignableTo(typeof(IPublisher)))
-                return (T?)_publisher;
+                return (T?)_examplePublisher;
 
             return default;
         }

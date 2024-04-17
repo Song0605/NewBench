@@ -8,7 +8,8 @@ namespace NewBench.API
     /// </summary>
     public sealed class Bench : IBench
     {
-        private readonly InstanceContainer _instanceContainerContainer;
+        private readonly IInstanceContainer _instanceContainerContainer;
+
         public Bench()
         {
             _instanceContainerContainer = new InstanceContainer();

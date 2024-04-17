@@ -4,6 +4,6 @@
     {
         string GetStr1();
         string GetStr2();
-        void UsingModel(Domain domain, string str1, string str2);
+        void UsingModel(IDomain domain, string str1, string str2);
     }
 }

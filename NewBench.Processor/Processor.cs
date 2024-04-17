@@ -11,15 +11,15 @@ namespace NewBench.Core
         /// 模拟内存中的数据集合
         /// </summary>
         public readonly Dictionary<string, string> Dict = new();
-        public void Add(string type = "") => Dict.Add(type, Factory.CreateStr(type));
+        public void Create(string type = "") => Dict.Add(type, StrFactory.CreateStr(type));
         public void Add(string key, string value) => Dict.Add(key, value);
         public string Get(string key) => Dict[key];
         public void Update(string key, string value) => Dict[key] = value;
         public void Delete(string key) => Dict.Remove(key);
         public Processor()
         {
-            Add("str1");
-            Add("str2");
+            Create("str1");
+            Create("str2");
         }
     }
 }
