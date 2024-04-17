@@ -1,24 +1,30 @@
-﻿namespace NewBench.Core.Hub
+﻿using NewBench.Core.Base;
+using NewBench.Core.Interface;
+using System;
+
+namespace NewBench.Core.Hub
 {
     /// <summary>
     /// 保存各类Command信息
     /// </summary>
-    public static class CommandHub
+    public class CommandHub : BaseHub<Action>
     {
-        public static Dictionary<string, Action> CommandDict { get; set; } = new();
-        static CommandHub() { }
-        public static bool RegisterCommand(string key, Action action)
+        public CommandHub() { }
+
+        public override bool Register(string key, Action value)
         {
-            if (CommandDict.ContainsKey(key))
-                CommandDict[key] = action;
+            if (ValueDict.ContainsKey(key))
+                ValueDict[key] = value;
             else
-                CommandDict.Add(key, action);
+                ValueDict.Add(key, value);
 
             return true;
+
         }
-        public static bool GetCommand(string key, out Action? action)
+
+        public override bool Get(string key, out Action? value)
         {
-            if (CommandDict.TryGetValue(key, out action))
+            if (ValueDict.TryGetValue(key, out value))
                 return true;
 
             return false;
