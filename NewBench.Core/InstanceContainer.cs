@@ -23,7 +23,7 @@ namespace NewBench.Core
             _publisher = new Publisher();
 
             _domain = new Domain();
-            if (_business is ISupportInstanceContainer { } supportInstance2)
+            if (_domain is ISupportInstanceContainer { } supportInstance2)
                 supportInstance2.Register(this);
 
             _business = new Business();
@@ -38,7 +38,7 @@ namespace NewBench.Core
         /// <inheritdoc />
         public T? GetCoordinator<T>() where T : ICoordinator
         {
-            if (typeof(T).IsAssignableFrom(typeof(ICoordinator)))
+            if (typeof(T).IsAssignableTo(typeof(ICoordinator)))
                 return (T?)_coordinator;
 
             return default;
@@ -47,7 +47,7 @@ namespace NewBench.Core
         /// <inheritdoc />
         public T? GetPublisher<T>() where T : IPublisher
         {
-            if (typeof(T).IsAssignableFrom(typeof(IPublisher)))
+            if (typeof(T).IsAssignableTo(typeof(IPublisher)))
                 return (T?)_publisher;
 
             return default;
@@ -56,7 +56,7 @@ namespace NewBench.Core
         /// <inheritdoc />
         public T? GetDomain<T>() where T : IDomain
         {
-            if (typeof(T).IsAssignableFrom(typeof(IDomain)))
+            if (typeof(T).IsAssignableTo(typeof(IDomain)))
                 return (T?)_domain;
 
             return default;
@@ -65,7 +65,7 @@ namespace NewBench.Core
         /// <inheritdoc />
         public T? GetBusiness<T>() where T : IBusiness
         {
-            if (typeof(T).IsAssignableFrom(typeof(IBusiness)))
+            if (typeof(T).IsAssignableTo(typeof(IBusiness)))
                 return (T?)_business;
 
             return default;
@@ -74,7 +74,7 @@ namespace NewBench.Core
         /// <inheritdoc />
         public T? GetProcessor<T>() where T : IProcessor
         {
-            if (typeof(T).IsAssignableFrom(typeof(IProcessor)))
+            if (typeof(T).IsAssignableTo(typeof(IProcessor)))
                 return (T?)_processor;
 
             return default;
