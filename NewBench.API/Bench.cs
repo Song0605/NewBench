@@ -4,7 +4,7 @@ using NewBench.Core.Interface.Instance;
 namespace NewBench.API
 {
     /// <summary>
-    /// 中台与UI（或外部组件）的中转站，通过Coordinator.Command与Publisher.Event间接建立通信关系。
+    /// 中台与UI（或外部组件）的交互层，通过Coordinator.Command与Publisher.Event间接建立通信关系。
     /// </summary>
     public sealed class Bench : IBench
     {
