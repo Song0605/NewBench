@@ -1,4 +1,4 @@
-﻿namespace NewBench.Core.Interface
+﻿namespace NewBench.Core.Interface.Instance
 {
     public interface IProcessor
     {

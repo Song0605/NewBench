@@ -1,26 +1,33 @@
 ﻿using NewBench.Core;
+using NewBench.Core.Interface.Instance;
 
 namespace NewBench.API
 {
     /// <summary>
     /// 中台与UI（或外部组件）的中转站，通过Coordinator.Command与Publisher.Event间接建立通信关系。
     /// </summary>
-    public class Bench
+    public sealed class Bench : IBench
     {
-        private readonly Instance _instance;
+        private readonly InstanceContainer _instanceContainerContainer;
         public Bench()
         {
-            _instance = new Instance();
+            _instanceContainerContainer = new InstanceContainer();
         }
 
-        public Coordinator? GetCoordinator<T>() where T : Coordinator
+        #region Implementation of IBench
+
+        /// <inheritdoc />
+        public T? GetCoordinator<T>() where T : ICoordinator
         {
-            return _instance.GetCoordinator<T>();
+            return _instanceContainerContainer.GetCoordinator<T>();
         }
 
-        public Publisher? GetPublisher<T>() where T : Publisher
+        /// <inheritdoc />
+        public T? GetPublisher<T>() where T : IPublisher
         {
-            return _instance.GetPublisher<T>();
+            return _instanceContainerContainer.GetPublisher<T>();
         }
+
+        #endregion
     }
 }

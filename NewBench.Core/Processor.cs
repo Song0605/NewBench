@@ -1,9 +1,11 @@
-﻿namespace NewBench.Core
+﻿using NewBench.Core.Interface.Instance;
+
+namespace NewBench.Core
 {
     /// <summary>
     /// 提供各类对象在内存集合中的CRUD的标准流程
     /// </summary>
-    public class Processor
+    public class Processor : IProcessor
     {
         /// <summary>
         /// 模拟内存中的数据集合

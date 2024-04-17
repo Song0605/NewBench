@@ -1,36 +1,50 @@
-﻿namespace NewBench.Core
+﻿using NewBench.Core.Interface.Ability;
+using NewBench.Core.Interface.Instance;
+
+namespace NewBench.Core
 {
     /// <summary>
     /// 提供复杂逻辑，可以与Processor交互，获取并整理数据
     /// </summary>
-    public class Business
+    public class Business : IBusiness,
+                            ISupportInstanceContainer
     {
-        private readonly Instance _instance;
+        private IInstanceContainer? _instanceContainer;
+        private Processor? _processor;
 
-        public Business(Instance instance)
-        {
-            _instance = instance;
-        }
+        public Business() { }
 
+        /// <inheritdoc />
         public string GetStr1()
         {
-            var processor = _instance.GetProcessor<Processor>();
-            if (processor == null) return "";
+            _processor ??= _instanceContainer?.GetProcessor<Processor>();
+            if (_processor == null) return "";
 
-            return processor.Get("str1");
+            return _processor.Get("str1");
         }
+
+        /// <inheritdoc />
         public string GetStr2()
         {
-            var processor = _instance.GetProcessor<Processor>();
-            if (processor == null) return "";
+            _processor ??= _instanceContainer?.GetProcessor<Processor>();
+            if (_processor == null) return "";
 
-            return processor.Get("str2");
+            return _processor.Get("str2");
         }
 
+        /// <inheritdoc />
         public void UsingModel(Domain domain, string str1, string str2)
         {
             var model = new Model();
             model.GetCombineStr(domain, str1, str2);
+        }
+
+        /// <inheritdoc />
+        public bool Register(IInstanceContainer instanceContainer)
+        {
+            _instanceContainer = instanceContainer;
+
+            return _instanceContainer != null;
         }
     }
 }
