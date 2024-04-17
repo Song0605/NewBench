@@ -8,6 +8,8 @@ namespace NewBench
 {
     public class MainVm : INotifyPropertyChanged
     {
+        private readonly Bench _bench;
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public ICommand ButtonCmd { get; set; }
@@ -22,7 +24,6 @@ namespace NewBench
             }
         }
 
-        private readonly Bench _bench;
         public MainVm()
         {
             _bench = new Bench();

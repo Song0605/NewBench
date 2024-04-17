@@ -12,7 +12,7 @@ namespace NewBench.Core
     public class Domain : IDomain, 
                           ISupportInstanceContainer
     {
-        private InstanceContainer? _instanceContainer;
+        private IInstanceContainer? _instanceContainer;
 
         public Domain() { }
         public void CombineToOutputString()
