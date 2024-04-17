@@ -1,7 +1,7 @@
 ﻿namespace NewBench.Core
 {
     /// <summary>
-    /// 类似Tipbox，在自己内部依赖Domain完成函数。
+    /// 看完DDD以后的设想；通过类的本身，依赖Domain完成函数。
     /// </summary>
     public class Model
     {
