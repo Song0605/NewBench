@@ -7,7 +7,7 @@ namespace NewBench.Core
     /// <summary>
     /// 领域对象
     /// 一：作为Business的整合，内部逻辑为调用流程；
-    /// 二：作为类似Util的对象，在Model内部调用时，作为参数传入，协助函数处理
+    /// 二：（设想）作为类似Util的对象，在Model内部调用时，作为参数传入，协助函数处理
     /// </summary>
     public class Domain : IDomain, 
                           ISupportInstanceContainer
