@@ -1,7 +1,4 @@
-﻿using NewBench.Core.Interface.Ability;
-using NewBench.Core.Interface.Instance;
-
-namespace NewBench.Core
+﻿namespace NewBench.Factory
 {
     /// <summary>
     /// 提供各类对象初始化的标准流程

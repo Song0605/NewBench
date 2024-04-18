@@ -12,7 +12,7 @@ namespace NewBench.API
 
         public Bench()
         {
-            _instanceContainerContainer = new InstanceContainer();
+            _instanceContainerContainer = new InstanceContainer.InstanceContainer();
         }
 
         #region Implementation of IBench

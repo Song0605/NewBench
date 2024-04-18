@@ -1,8 +1,7 @@
-﻿using NewBench.Core.Base;
-using NewBench.Core.Interface.Ability;
+﻿using NewBench.Core.Interface.Ability;
 using NewBench.Core.Interface.Instance;
 
-namespace NewBench.Core
+namespace NewBench.Domain
 {
     /// <summary>
     /// 领域对象

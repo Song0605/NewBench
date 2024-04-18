@@ -1,7 +1,8 @@
-﻿using NewBench.Core.Interface.Ability;
+﻿using NewBench.Core;
+using NewBench.Core.Interface.Ability;
 using NewBench.Core.Interface.Instance;
 
-namespace NewBench.Core
+namespace NewBench.Business
 {
     /// <summary>
     /// 提供复杂逻辑，可以与Processor交互，获取并整理数据

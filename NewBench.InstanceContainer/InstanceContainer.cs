@@ -2,7 +2,7 @@
 using NewBench.Core.Interface.Instance;
 using NewBench.Publisher;
 
-namespace NewBench.Core
+namespace NewBench.InstanceContainer
 {
     /// <summary>
     /// 管理实例对象
@@ -17,21 +17,21 @@ namespace NewBench.Core
 
         public InstanceContainer()
         {
-            _coordinator = new Coordinator();
+            _coordinator = new Coordinator.Coordinator();
             if (_coordinator is ISupportInstanceContainer { } supportInstance1)
                 supportInstance1.Register(this);
 
             _examplePublisher = new ExamplePublisher();
 
-            _domain = new Domain();
+            _domain = new Domain.Domain();
             if (_domain is ISupportInstanceContainer { } supportInstance2)
                 supportInstance2.Register(this);
 
-            _business = new Business();
+            _business = new Business.Business();
             if (_business is ISupportInstanceContainer { } supportInstance)
                 supportInstance.Register(this);
 
-            _processor = new Processor();
+            _processor = new Processor.Processor();
         }
         
         #region Implementation of IInstance

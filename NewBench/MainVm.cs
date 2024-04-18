@@ -31,7 +31,7 @@ namespace NewBench
             _bench = new Bench();
             _bench.GetPublisher<IPublisher>()!.SomethingPublished += MainVm_SomethingPublished;
 
-            ButtonCmd = new ExampleCommand(_bench.GetCoordinator<Coordinator>()!.DoSomething);
+            ButtonCmd = new ExampleCommand(_bench.GetCoordinator<Coordinator.Coordinator>()!.DoSomething);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ButtonCmd)));
         }
 

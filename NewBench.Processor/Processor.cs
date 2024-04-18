@@ -1,6 +1,7 @@
 ﻿using NewBench.Core.Interface.Instance;
+using NewBench.Factory;
 
-namespace NewBench.Core
+namespace NewBench.Processor
 {
     /// <summary>
     /// 提供各类对象在内存集合中的CRUD的标准流程

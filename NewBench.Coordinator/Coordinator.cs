@@ -1,7 +1,7 @@
 ﻿using NewBench.Core.Interface.Ability;
 using NewBench.Core.Interface.Instance;
 
-namespace NewBench.Core
+namespace NewBench.Coordinator
 {
     /// <summary>
     /// 类似API的功能，只提供调用方法
