@@ -1,4 +1,4 @@
-﻿namespace NewBench.Core.Interface.Property
+﻿namespace NewBench.Base.Interface.Property
 {
     public interface IComponent
     {

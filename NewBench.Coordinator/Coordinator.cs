@@ -1,5 +1,5 @@
-﻿using NewBench.Core.Interface.Ability;
-using NewBench.Core.Interface.Instance;
+﻿using NewBench.Base.Interface.Ability;
+using NewBench.Base.Interface.Instance;
 
 namespace NewBench.Coordinator
 {

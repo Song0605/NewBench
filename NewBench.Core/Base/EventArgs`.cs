@@ -1,4 +1,4 @@
-﻿namespace NewBench.Core.Base
+﻿namespace NewBench.Base.Base
 {
     public class EventArgs<T> : EventArgs where T : class
     {

@@ -1,6 +1,6 @@
-﻿using NewBench.Core.Base;
+﻿using NewBench.Base.Base;
 
-namespace NewBench.Core.Interface.Instance
+namespace NewBench.Base.Interface.Instance
 {
     public interface IPublisher
     {

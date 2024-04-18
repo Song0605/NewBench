@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\NewBench.Core\NewBench.Base.csproj" />
-    <ProjectReference Include="..\NewBench.Factory\NewBench.Factory.csproj" />
-  </ItemGroup>
-
 </Project>

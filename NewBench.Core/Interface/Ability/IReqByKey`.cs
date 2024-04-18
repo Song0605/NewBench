@@ -1,6 +1,4 @@
-﻿using NewBench.Core.Interface.Instance;
-
-namespace NewBench.Core.Interface.Ability
+﻿namespace NewBench.Base.Interface.Ability
 {
     public interface IReqByKey<out T> where T : class
     {

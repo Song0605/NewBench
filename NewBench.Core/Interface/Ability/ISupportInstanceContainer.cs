@@ -1,6 +1,6 @@
-﻿using NewBench.Core.Interface.Instance;
+﻿using NewBench.Base.Interface.Instance;
 
-namespace NewBench.Core.Interface.Ability
+namespace NewBench.Base.Interface.Ability
 {
     public interface ISupportInstanceContainer
     {

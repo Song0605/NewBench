@@ -1,4 +1,4 @@
-﻿using NewBench.Core.Interface.Instance;
+﻿using NewBench.Base.Interface.Instance;
 using NewBench.Factory;
 
 namespace NewBench.Processor

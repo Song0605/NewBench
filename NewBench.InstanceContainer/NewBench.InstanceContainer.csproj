@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\NewBench.Business\NewBench.Business.csproj" />
     <ProjectReference Include="..\NewBench.Coordinator\NewBench.Coordinator.csproj" />
-    <ProjectReference Include="..\NewBench.Core\NewBench.Core.csproj" />
+    <ProjectReference Include="..\NewBench.Core\NewBench.Base.csproj" />
     <ProjectReference Include="..\NewBench.Domain\NewBench.Domain.csproj" />
     <ProjectReference Include="..\NewBench.Processor\NewBench.Processor.csproj" />
     <ProjectReference Include="..\NewBench.Publisher\NewBench.Publisher.csproj" />

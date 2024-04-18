@@ -1,5 +1,5 @@
-﻿using NewBench.Core;
-using NewBench.Core.Interface.Instance;
+﻿using NewBench.Base.Interface.Instance;
+using NewBench.Base;
 
 namespace NewBench.API
 {

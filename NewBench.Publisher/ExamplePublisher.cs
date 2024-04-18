@@ -1,6 +1,6 @@
-﻿using NewBench.Core.Base;
-using NewBench.Core.Interface.Instance;
-using System.Reflection;
+﻿using System.Reflection;
+using NewBench.Base.Base;
+using NewBench.Base.Interface.Instance;
 
 namespace NewBench.Publisher
 {

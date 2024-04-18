@@ -1,9 +1,9 @@
 ﻿using NewBench.API;
-using NewBench.Core;
-using NewBench.Core.Base;
-using NewBench.Core.Interface.Instance;
+using NewBench.Base;
 using System.ComponentModel;
 using System.Windows.Input;
+using NewBench.Base.Base;
+using NewBench.Base.Interface.Instance;
 
 namespace NewBench
 {
