@@ -36,8 +36,8 @@ namespace NewBench.Business
         /// <inheritdoc />
         public void UsingModel(IDomain domain, string str1, string str2)
         {
-            var model = new Model();
-            model.GetCombineStr(domain, str1, str2);
+            //var model = new Model();
+            //model.GetCombineStr(domain, str1, str2);
         }
 
         /// <inheritdoc />
