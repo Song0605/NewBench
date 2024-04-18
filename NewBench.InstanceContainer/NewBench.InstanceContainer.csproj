@@ -11,7 +11,6 @@
     <ProjectReference Include="..\NewBench.Coordinator\NewBench.Coordinator.csproj" />
     <ProjectReference Include="..\NewBench.Core\NewBench.Core.csproj" />
     <ProjectReference Include="..\NewBench.Domain\NewBench.Domain.csproj" />
-    <ProjectReference Include="..\NewBench.Factory\NewBench.Factory.csproj" />
     <ProjectReference Include="..\NewBench.Processor\NewBench.Processor.csproj" />
     <ProjectReference Include="..\NewBench.Publisher\NewBench.Publisher.csproj" />
   </ItemGroup>
