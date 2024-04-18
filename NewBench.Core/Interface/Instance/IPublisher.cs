@@ -1,4 +1,4 @@
-﻿using NewBench.Base.Base;
+﻿using NewBench.Base.Object;
 
 namespace NewBench.Base.Interface.Instance
 {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace NewBench.Base.Base
+namespace NewBench.Base.Object
 {
     public class ExampleCommand : ICommand
     {

@@ -2,8 +2,8 @@
 using NewBench.Base;
 using System.ComponentModel;
 using System.Windows.Input;
-using NewBench.Base.Base;
 using NewBench.Base.Interface.Instance;
+using NewBench.Base.Object;
 
 namespace NewBench
 {
